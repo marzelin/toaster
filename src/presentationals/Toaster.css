@@ -1,0 +1,73 @@
+.toaster {
+  padding: 40px 20px;
+  background-color: #111;
+  opacity: 0.8;
+  color: #fff;
+  border-radius: 3px;
+  margin: 5px;
+  display: flex;
+  transition: all 200ms ease-in-out;
+  animation: comein 500ms ease-in-out 1 forwards;
+}
+
+.toaster-remove {
+  composes: toaster;
+  animation-name: remove;
+}
+
+.toaster:hover {
+  opacity: 1;
+}
+
+.toaster-info {
+  padding-right: 15px;
+  font-size: 1.5rem;
+  line-height: 0.7;
+}
+
+.toaster-message {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.toaster-close {
+  /* reset button */
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  border: none;
+  /**************/
+  padding-left: 15px;
+  font-size: 2rem;
+  margin-left: auto;
+  line-height: 0.5;
+  cursor: pointer;
+}
+
+.toaster-close:focus {
+  outline: none;
+}
+
+.toaster-close:hover {
+  color: red;
+}
+
+@keyframes comein {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes remove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
