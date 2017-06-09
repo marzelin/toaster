@@ -7,7 +7,7 @@
   margin: 5px;
   display: flex;
   transition: all 200ms ease-in-out;
-  animation: comein 500ms ease-in-out 1 forwards;
+  animation: comein 200ms ease-in-out 1 forwards;
 }
 
 .toaster-remove {
