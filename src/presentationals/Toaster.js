@@ -9,7 +9,6 @@ export default ({
   onAnimationEnd,
   isBeingRemoved
 }) => {
-  console.log("rendering toaster", children)
   const className = isBeingRemoved ? styles["toaster-remove"] : styles.toaster
   return (
     <div
